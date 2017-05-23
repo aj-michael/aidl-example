@@ -14,3 +14,14 @@ and uses methods declared in the service.
 
 Note it also tells you how long it took to receive the entire response from the Service, AIDL is *very* fast
 compared to other forms of IPC.
+
+### Building with Bazel
+
+Download bazel 0.4.5 or later from https://github.com/bazelbuild/bazel/releases.
+You can then build the two APKs like this:
+
+```
+$ bazel build //app/src/main:app //receiver/src/main:service
+INFO: Found 2 targets...
+INFO: Elapsed time: 10.656s, Critical Path: 9.00s
+```
