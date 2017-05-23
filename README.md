@@ -24,4 +24,14 @@ You can then build the two APKs like this:
 $ bazel build //app/src/main:app //receiver/src/main:service
 INFO: Found 2 targets...
 INFO: Elapsed time: 10.656s, Critical Path: 9.00s
+
+$ adb install bazel-bin/receiver/src/main/service.apk
+bazel-bin/receiver/src/main/service.apk: 1 file pushed. 0.7 MB/s (25933 bytes in 0.033s)
+        pkg: /data/local/tmp/service.apk
+Success
+
+$ adb install bazel-bin/app/src/main/app.apk
+bazel-bin/app/src/main/app.apk: 1 file pushed. 1.7 MB/s (1083460 bytes in 0.603s)
+        pkg: /data/local/tmp/app.apk
+Success
 ```
